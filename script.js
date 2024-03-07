@@ -4,7 +4,7 @@ const listContainer = document.getElementById("list-container");
 
 function addTask() {
     if (inputBox.value === '') {
-        alert("You must write something!");
+        alert("try adding your task!");
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBox.value + " (" + categoryDropdown.value + ")";
@@ -19,10 +19,17 @@ function addTask() {
 
 listContainer.addEventListener("click", function (e) {
     if (e.target.tagName === "LI") {
+        
         e.target.classList.toggle("checked");
+        alert("congrats on completing your task,keep going!");
         saveData();
     } else if (e.target.tagName === "SPAN") {
+        if(confirm("are you sure you wanna delete??"))
         e.target.parentElement.remove();
+    else
+    {
+        text="you canceled!";
+    }
         saveData();
     }
 }, false);
