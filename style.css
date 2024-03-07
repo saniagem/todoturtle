@@ -20,7 +20,6 @@
     width: 100%;
     max-width: 540px;
     background: 
-
  #808080;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
@@ -57,7 +56,7 @@ button{
     outline: none;
     padding: 16px 50px;
     background:   #ffff99;
-    color: #094428;
+    color: #000000;
     font-size: 16px;
     cursor: pointer;
     border-radius: 40px;
@@ -74,11 +73,7 @@ ul li::before{
     content: '';
     position: absolute;
     height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url();
-    background-size: cover;
-    background-position: center;    
+    width: 28px;   
     top: 12px;
     left: 8px;
 }
@@ -102,5 +97,42 @@ ul li span{
     border-radius: 50%;
 }
 ul li span:hover{
-    background: #4c9453;
+    background: #ffff99;
+}
+
+
+#category {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+
+#category option {
+    background-color: #fff;
+    color: #333;
+}
+
+
+button {
+    background-color: 	 #b8b894;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #ffff99 ;
+}
+
+@media screen and (max-width: 600px) {
+    #category {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
