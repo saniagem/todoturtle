@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Random Quote Generator">
+    <meta name="keywords" content="HTML,CSS,JavaScript, Quotes, API">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+    <link rel="stylesheet" href="quote.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <i class="fas fa-quote-left"></i>
+            <span class="quote" id="quote"></span>
+            <i class="fas fa-quote-right"></i>
+        </h1>
+        <p class="author" id="author"></p>
+        <hr/>
+        <div class="buttons">
+            <button class="next" onclick="getNewQuote()">HOP TO THE NEXT QUOTE!</button>
+            <button class="play-pause" onclick="toggleAudio()">
+                <i id="playPauseIcon" class="fas fa-play"></i> <!-- Font Awesome play icon -->
+            </button>
+        </div>
+    </div>
+
+    <a href="page2.html">
+        <button class="button" style="vertical-align:middle"><span> to-do turtle </span></button>
+    </a>
+
+    <audio id="audioElement" controls>
+        <source src="hi.ogg" type="audio/ogg">
+        <source src="hi.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <script src="quote.js"></script>
+    <script>
+        function toggleAudio() {
+            var audio = document.getElementById('audioElement');
+            var playPauseIcon = document.getElementById('playPauseIcon');
+
+            if (audio.paused) {
+                audio.play();
+                playPauseIcon.classList.remove('fa-play');
+                playPauseIcon.classList.add('fa-pause');
+            } else {
+                audio.pause();
+                playPauseIcon.classList.remove('fa-pause');
+                playPauseIcon.classList.add('fa-play');
+            }
+        }
+    </script>
+</body>
+</html>
